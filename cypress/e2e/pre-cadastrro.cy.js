@@ -10,7 +10,7 @@ describe('Funcionalidade Pré Cadastro', () => {
     it('Deve completar o pré cadastro com sucesso', () => {
         let nomeFaker = faker.name.firstName()
         let sobrenomeFaker = faker.name.lastName()
-        let emailFaker = faker.internet.email()
+        let emailFaker = faker.internet.email(nomeFaker)
         
         cy.get('#reg_email').type(emailFaker)
         cy.get('#reg_password').type('teste@teste123!')
